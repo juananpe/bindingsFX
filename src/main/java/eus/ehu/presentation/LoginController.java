@@ -16,7 +16,6 @@ public class LoginController {
     private Label roleLabel;
 
     private ObservableList<String> roles;
-    private StringProperty selectedRole = new SimpleStringProperty();
 
     @FXML
     void initialize() {
@@ -25,11 +24,7 @@ public class LoginController {
         roleCombo.setItems(roles);
 
         // bind the roleLabel text property to the selectedRole property
-        roleLabel.textProperty().bind(selectedRole);
+        roleLabel.textProperty().bind(roleCombo.valueProperty());
 
-        // add listener to update selectedRole when combo box value changes
-        roleCombo.valueProperty().addListener((obs, oldVal, newVal) -> {
-            selectedRole.set("You selected: " + newVal);
-        });
     }
 }
