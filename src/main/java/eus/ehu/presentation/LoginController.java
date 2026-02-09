@@ -2,6 +2,7 @@ package eus.ehu.presentation;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -15,11 +16,6 @@ public class LoginController {
 
     private ObservableList<String> roles;
 
-  /*  @FXML para usar el bind, no es necesario el handler
-    void comboHandler(ActionEvent event) {
-        String role = roleCombo.getValue();
-        roleLabel.setText("You selected: " + role);
-    }*/
 
     @FXML
     void initialize() {
